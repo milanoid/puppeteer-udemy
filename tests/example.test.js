@@ -4,7 +4,7 @@ const expect = require('chai').expect
 describe('My First Puppeteer Test', () => {
     it('should launch the browser', async function(){
         const browser = await puppeteer.launch({
-            headless: true, 
+            headless: false, 
             slowMo: 10, 
             devtools: false, 
         })
@@ -24,6 +24,13 @@ describe('My First Puppeteer Test', () => {
         expect(actualUrl).to.include('example.com')
         expect(actualText).to.be.a('string', 'Example Domain')
         expect(actualCount).to.eq(2)
+
+        await page.goto('http://zero.webappsecurity.com/index.html')
+        await page.waitForSelector('#searchTerm')
+        await page.type('#searchTerm', 'Hello World')
+        await page.keyboard.press('Enter', { delay: 10 })
+
+        await page.waitForTimeout(5000)
 
         await browser.close()
     })
