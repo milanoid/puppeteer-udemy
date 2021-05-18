@@ -12,6 +12,8 @@ describe('My First Puppeteer Test', () => {
         await page.setDefaultTimeout(10000) // by default it is 30 seconds
         await page.setDefaultTimeout(20000)
         await page.goto('https://example.com/')
+        await page.waitForXPath('//h1')
+
         const actualTitle = await page.title()
         const actualUrl = await page.url()
         // $eval(<element>, <callback function>) returns one element
@@ -26,12 +28,13 @@ describe('My First Puppeteer Test', () => {
         expect(actualCount).to.eq(2)
 
         await page.goto('http://zero.webappsecurity.com/index.html')
-        await page.waitForSelector('#searchTerm')
-        await page.type('#searchTerm', 'Hello World')
-        await page.keyboard.press('Enter', { delay: 10 })
-
-        await page.waitForTimeout(5000)
-
+        await page.waitForSelector('#signin_button')
+        await page.click('#signin_button')
+        await page.waitForFunction(() => !document.querySelector('#signin_button'))
+        await page.waitForSelector('#signin_button', { 
+            hidden: true, 
+            timeout: 3000 
+        })
         await browser.close()
     })
 })
