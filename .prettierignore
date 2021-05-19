@@ -1,0 +1,8 @@
+build
+coverage
+node_modules
+.gitignore
+.prettierrc
+*.md
+package-lock.json
+package.json

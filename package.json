@@ -1,23 +1,23 @@
 {
-  "name": "puppeteer-tests",
-  "version": "1.0.0",
-  "description": "Automated tests with Puppeteer",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
-  },
-  "keywords": [
-    "Puppeteer",
-    "Mocha",
-    "Chai",
-    "Automation"
-  ],
-  "author": "Milan Vojnovic",
-  "license": "ISC",
-  "dependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^8.4.0",
-    "prettier": "^2.3.0",
-    "puppeteer": "^9.1.1"
-  }
+	"name": "puppeteer-tests",
+	"version": "1.0.0",
+	"description": "Automated tests with Puppeteer",
+	"main": "index.js",
+	"scripts": {
+		"test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+	},
+	"keywords": [
+		"Puppeteer",
+		"Mocha",
+		"Chai",
+		"Automation"
+	],
+	"author": "Milan Vojnovic",
+	"license": "ISC",
+	"dependencies": {
+		"chai": "^4.3.4",
+		"mocha": "^8.4.0",
+		"prettier": "^2.3.0",
+		"puppeteer": "^9.1.1"
+	}
 }
