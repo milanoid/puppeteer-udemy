@@ -2,35 +2,33 @@ const puppeteer = require('puppeteer')
 const expect = require('chai').expect
 
 describe('My Second Puppeteer Test', () => {
-    let browser
-    let page
-    
-    before(async function() {
-        browser = await puppeteer.launch({
+	let browser
+	let page
+
+	before(async function () {
+		browser = await puppeteer.launch({
 			headless: false,
 			slowMo: 10,
 			devtools: false,
 		})
-		page = await browser.newPage()   
-        await page.setDefaultTimeout(10000)
+		page = await browser.newPage()
+		await page.setDefaultTimeout(10000)
 		await page.setDefaultTimeout(20000)
-    })
+	})
 
-    after(async function() {
-        await browser.close()
-    })
+	after(async function () {
+		await browser.close()
+	})
 
-    beforeEach(async function() {
-        // runs before each test step
-    })
+	beforeEach(async function () {
+		// runs before each test step
+	})
 
-    afterEach(async function() {
-        // runs after each test step
-    })
-
+	afterEach(async function () {
+		// runs after each test step
+	})
 
 	it('should launch the browser', async function () {
-		
 		await page.goto('https://example.com/')
 		await page.waitForXPath('//h1')
 
