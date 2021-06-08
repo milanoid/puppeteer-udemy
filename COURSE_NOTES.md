@@ -17,3 +17,7 @@
 
 ## Section 5 - Automation Framework using Jest and Puppeteer
 
+- initialize by `npm init` and follow wizard
+- `npm install jest puppeteer jest-puppeteer`
+- `npm install @babel/core @babel/preset-env babel-jest`
+- `node_modules/.bin/jest --init`

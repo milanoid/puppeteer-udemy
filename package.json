@@ -1,0 +1,27 @@
+{
+  "name": "puppeteer-udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milanoid/puppeteer-udemy.git"
+  },
+  "author": "Milan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milanoid/puppeteer-udemy/issues"
+  },
+  "homepage": "https://github.com/milanoid/puppeteer-udemy#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.4",
+    "jest-puppeteer": "^5.0.4",
+    "puppeteer": "^10.0.0"
+  }
+}
