@@ -14,3 +14,6 @@
 
 - `example.test.js` + edit `package.json` - `scripts.test`
 - run tests by `npm run test`
+
+## Section 5 - Automation Framework using Jest and Puppeteer
+
